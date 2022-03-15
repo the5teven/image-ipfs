@@ -150,7 +150,7 @@ export default class Ui {
   fillImage(url) {
 
     if (url.toLocaleLowerCase().startsWith('ipfs://') && this.config.ipfsGateway){
-      url = `https://${this.config.ipfsGateway}/ipfs/${url.substring(7)}`;
+      url = 'https://' + this.config.ipfsGateway + '/ipfs/' + url.substring(7);
     }
 
     /**
