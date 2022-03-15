@@ -148,6 +148,11 @@ export default class Ui {
    * @returns {void}
    */
   fillImage(url) {
+
+    if (url.toLocaleLowerCase().startsWith('ipfs://') && this.config.ipfsGateway){
+      url = `https://${this.config.ipfsGateway}/ipfs/${url.substring(7)}`;
+    }
+
     /**
      * Check for a source extension to compose element correctly: video tag for mp4, img — for others
      */
