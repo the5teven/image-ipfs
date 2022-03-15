@@ -122,6 +122,7 @@ export default class ImageTool {
       buttonContent: config.buttonContent || '',
       uploader: config.uploader || undefined,
       actions: config.actions || [],
+      ipfsGateway: config.ipfsGateway || null,
     };
 
     /**
